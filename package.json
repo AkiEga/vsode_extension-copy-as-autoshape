@@ -1,0 +1,51 @@
+{
+	"name": "copy-as-autoshape",
+	"displayName": "copy-as-autoshape",
+	"description": "copy selected code section to a powerpoint's autoshape",
+	"version": "0.0.1",
+	"engines": {
+		"vscode": "^1.33.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:extension.copy2autoshape"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "extension.copy2autoshape",
+				"title": "copy2autoshape"
+			}
+		],
+		"menus": {
+			"editor/context": [
+				{
+					"command": "extension.copy2autoshape",
+					"when": "editorHasSelection",
+					"group": "navigation"
+				}
+			]
+		}
+	},
+	"scripts": {
+		"vscode:prepublish": "yarn run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"postinstall": "node ./node_modules/vscode/bin/install",
+		"test": "yarn run compile && node ./node_modules/vscode/bin/test"
+	},
+	"devDependencies": {
+		"@types/mocha": "^2.2.42",
+		"@types/node": "^10.12.21",
+		"tslint": "^5.12.1",
+		"typescript": "^3.3.1",
+		"vscode": "^1.1.28"
+	},
+	"dependencies": {
+		"@types/fs-extra": "^5.0.5",
+		"fs-extra": "^7.0.1"
+	}
+}
