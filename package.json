@@ -46,6 +46,7 @@
 	},
 	"dependencies": {
 		"@types/fs-extra": "^5.0.5",
-		"fs-extra": "^7.0.1"
+		"fs-extra": "^7.0.1",
+		"querystringify": "2.0.0"
 	}
 }
